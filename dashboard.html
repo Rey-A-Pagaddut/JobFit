@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#635bff">
+  <meta name="description" content="JobFit — find work that fits your future.">
+  <title>JobFit — Find your fit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-start-page="home">
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="appView" class="app">
+    <aside id="sidebar" class="sidebar">
+      <a class="brand sidebar-brand" href="#" data-page="home"><span class="brand-mark">JF</span><span>Job<span class="brand-fit">Fit</span></span></a>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-page="home"><i class="bi bi-house-door"></i><span>Home</span></button>
+        <button class="nav-item" data-page="network"><i class="bi bi-people"></i><span>My Network</span><span class="nav-count">4</span></button>
+        <button class="nav-item" data-page="jobs"><i class="bi bi-briefcase"></i><span>Find jobs</span></button>
+        <button class="nav-item" data-page="applications"><i class="bi bi-file-earmark-check"></i><span>Applications</span></button>
+        <button class="nav-item" data-page="saved"><i class="bi bi-bookmark"></i><span>Saved jobs</span></button>
+        <button class="nav-item" data-page="messages"><i class="bi bi-chat-square-text"></i><span>Messages</span><span class="unread-dot"></span></button>
+        <button class="nav-item" data-page="notifications"><i class="bi bi-bell"></i><span>Notifications</span></button>
+      </nav>
+      <div class="side-label side-label-spaced">YOU</div>
+      <nav class="side-nav">
+        <button class="nav-item" data-page="profile"><i class="bi bi-person-badge"></i><span>My profile</span></button>
+        <button class="nav-item" data-page="settings"><i class="bi bi-gear"></i><span>Settings</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="upgrade-card"><span class="upgrade-spark"><i class="bi bi-stars"></i></span><b>Make your next move.</b><p>Complete your profile to stand out.</p><button data-page="profile">Improve profile <i class="bi bi-arrow-up-right"></i></button></div>
+        <button class="mini-user" data-page="profile"><span class="avatar avatar-purple" id="sidebarAvatar">JF</span><span class="mini-user-text"><b id="sidebarName">JobFit Member</b><small id="sidebarHeadline">Open to opportunities</small></span><i class="bi bi-three-dots"></i></button>
+      </div>
+    </aside>
+
+    <div class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu icon-button" id="mobileMenuBtn" aria-label="Open menu"><i class="bi bi-list"></i></button>
+        <a class="brand topbar-brand" href="#" data-page="home"><span class="brand-mark">JF</span><span>Job<span class="brand-fit">Fit</span></span></a>
+        <div class="global-search"><i class="bi bi-search"></i><input id="globalSearch" type="search" placeholder="Search jobs, people, companies..." aria-label="Search JobFit"><kbd>⌘ K</kbd></div>
+        <div class="topbar-actions">
+          <button class="icon-button topbar-icon" data-page="messages" aria-label="Messages"><i class="bi bi-chat-square-text"></i><span class="icon-dot"></span></button>
+          <button class="icon-button topbar-icon" data-page="notifications" aria-label="Notifications"><i class="bi bi-bell"></i><span class="icon-dot"></span></button>
+          <button class="top-profile" data-page="profile"><span class="avatar avatar-purple" id="topAvatar">JF</span><span class="top-profile-name">Me <i class="bi bi-chevron-down"></i></span></button>
+          <button class="icon-button logout-top" id="logoutBtn" aria-label="Log out" title="Log out"><i class="bi bi-box-arrow-right"></i></button>
+        </div>
+      </header>
+
+      <main id="pageContent" class="page-content"></main>
+      <footer class="app-footer"><span>© 2026 JobFit</span><a href="#" data-info="About JobFit">About</a><a href="#" data-info="Help Center">Help Center</a><a href="#" data-info="Privacy Policy">Privacy</a><span class="footer-tag"><span class="brand-mark tiny">JF</span> Find your fit.</span></footer>
+    </div>
+    <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+      <button data-page="home" class="active"><i class="bi bi-house-door"></i><span>Home</span></button>
+      <button data-page="network"><i class="bi bi-people"></i><span>Network</span></button>
+      <button data-page="jobs"><i class="bi bi-briefcase"></i><span>Jobs</span></button>
+      <button data-page="messages"><i class="bi bi-chat-square-text"></i><span>Inbox</span></button>
+      <button data-page="profile"><i class="bi bi-person-circle"></i><span>Profile</span></button>
+    </nav>
+  </div>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop">
+    <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close icon-button" id="modalClose" aria-label="Close dialog"><i class="bi bi-x-lg"></i></button>
+      <div id="modalContent"></div>
+    </section>
+  </div>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

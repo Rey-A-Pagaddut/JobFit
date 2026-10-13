@@ -1,0 +1,8 @@
+/* Authentication page refinements. Shared design tokens and auth components live in style.css. */
+.auth-page .auth-shell { min-height: 100vh; }
+.auth-page .auth-card form { display: flex; flex-direction: column; }
+.auth-page .form-message { min-height: 16px; margin: 8px 0 0; color: #c2415d; font-size: 12px; line-height: 1.5; }
+.auth-page .auth-switch a { text-decoration: none; }
+.auth-page .auth-switch a:hover { text-decoration: underline; }
+.auth-page .social-btn { cursor: pointer; }
+.auth-page .social-btn:focus-visible, .auth-page .primary-btn:focus-visible, .auth-page .test-btn:focus-visible { outline: 3px solid rgba(99,91,255,.3); outline-offset: 2px; }
